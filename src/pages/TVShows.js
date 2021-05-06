@@ -34,7 +34,6 @@ const TVShows = () => {
     setPageNumber(Number(pageNumber) + 1)
   }
   
-  
 
   useEffect(() => {
     fetch(generateURL(queries))

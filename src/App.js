@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Movies from './pages/Movies'
 import TVShows from './pages/TVShows'
+import ShowPage from './pages/ShowPage'
 
 const App = () => {
   return (
@@ -38,6 +39,9 @@ const App = () => {
           </Route>
           <Route path="/TV-Shows" exact>
             <TVShows />
+          </Route>
+          <Route path="/TV-Shows/:id" exact>
+            <ShowPage />
           </Route>
         </Switch>
       </div>
