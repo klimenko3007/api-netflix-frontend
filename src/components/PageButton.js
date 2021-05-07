@@ -1,13 +1,16 @@
 import React from 'react'
 
-const PageButton = ({page, setPageNumber}) => {
+const PageButton = ({ page, setPageNumber, pageNumber }) => {
+  const generateClasseName = (pageNumber) => {
+    return `button ${pageNumber === page && "active"}`
+  }
   return (
-      <button
-        value={page}
-        onClick={(e) => setPageNumber(e.target.value)}
-      >
-        {page}
-      </button>
+    <button
+      className={generateClasseName(pageNumber)}
+      onClick={(e) => setPageNumber(page)}
+    >
+      {page}
+    </button>
 
   )
 }

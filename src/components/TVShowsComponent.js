@@ -2,7 +2,7 @@ import React from 'react'
 
 import TVShowThumb from './TVShowThumb'
 
-const SHOWS_PER_PAGE = 50
+import { SHOWS_PER_PAGE } from '../reusables/constants'
 
 const TVShowsComponent = ({ tvShows, pageNumber }) => {
   const startIndex = (pageNumber - 1)*SHOWS_PER_PAGE
@@ -10,7 +10,6 @@ const TVShowsComponent = ({ tvShows, pageNumber }) => {
 
   return (
     <div>
-      <h1>TV Shows</h1>
       {selectedShows.map(show => <TVShowThumb key={show.show_id} show={show} />)}
     </div>
   )

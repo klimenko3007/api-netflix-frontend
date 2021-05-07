@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
 import { generateURL } from '../reusables/urls'
+import { SHOWS_PER_PAGE } from '../reusables/constants'
 
 import TVShowsComponent from '../components/TVShowsComponent'
 import Pagination from '../components/Pagination'
+import Form from "../components/Form";
 
 const TVShows = () => {
   const initialQueries = [
@@ -17,75 +19,32 @@ const TVShows = () => {
   const [pageNumber, setPageNumber] = useState(1)
   const [tvShows, setTVShows] = useState([])
   const [totalPages, setTotalPages] = useState(0)
-  const [year, setYear] = useState("")
-  const [director, setDirector] = useState("")
-  const [yearAfter, setYearAfter] = useState("")
-  const [yearBefore, setYearBefore] = useState("")
-  const [country, setCountry] = useState("")
-  const [cast, setCast] = useState("")
   const [queries, setQueries] = useState(initialQueries)
-
-
-  const onPreviousPageClick = () => {
-    setPageNumber(Number(pageNumber) - 1)
-  }
-
-  const onNextPageClick = () => {
-    setPageNumber(Number(pageNumber) + 1)
-  }
-  
 
   useEffect(() => {
     fetch(generateURL(queries))
       .then(res => res.json())
       .then(receivedShows => setTVShows(receivedShows.titels))
-
-    setTotalPages(Math.ceil(tvShows.length / 50))
+    setTotalPages(Math.ceil(tvShows.length / SHOWS_PER_PAGE))
 
   }, [queries, tvShows.length])
 
-  const onYearChange = (event) => {
-    setYear(event.target.value)
-  }
-
-  const onFormSubmit = (event) => {
+  const onFormSubmit = (event, updatedQueries) => {
     event.preventDefault()
-    const updatedQueries = [
-      { name: "year", value: year },
-      { name: "director", value: director },
-      { name: "country", value: country },
-      { name: "cast", value: cast },
-      { name: "yearAfter", value: yearAfter },
-      { name: "yearBefore", value: yearBefore }
-    ]
     setQueries(updatedQueries)
   }
 
   return (
-    <div>
-      <form  onSubmit={onFormSubmit}>
-        <label>
-          Enter year
-          <input
-            type="text"
-            value={year}
-            onChange={onYearChange}
-          />
-        </label>
-        <label>
-          Enter cast
-          <input
-            type="text"
-            value={cast}
-            onChange={e => setCast(e.target.value)}
-          />
-        </label>
-        <button type="submit">Submit</button>
-        </form>
+    <div className="tvshow-container">
+      <h1 className="section-headline">TV Shows</h1>
+      <Form onFormSubmit={onFormSubmit} />
       <TVShowsComponent tvShows={tvShows} pageNumber={pageNumber} />
-      <Pagination totalPages={totalPages} setPageNumber={setPageNumber} />
-      <button onClick={onPreviousPageClick}>Back</button>
-      <button onClick={onNextPageClick}>Next</button>
+      <Pagination
+        totalPages={totalPages}
+        setPageNumber={setPageNumber}
+        pageNumber={pageNumber}
+      />
+
     </div>
   )
 }
