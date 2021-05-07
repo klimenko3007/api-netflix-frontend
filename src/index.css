@@ -16,6 +16,7 @@ code {
 .content-container {
   margin: 0;
   min-height: 100vh;
+  width: 100%;
 }
 .nav-container {
   margin: 0;
@@ -26,11 +27,48 @@ code {
   justify-content: space-between;
   background-color: black;
   width: 100%;
-
 }
 .nav-link {
   color: white;
   text-decoration: none;
+}
+
+.home-contaier {
+  margin: 0;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 5px;
+  background-color: black;
+}
+.headline-home {
+  font-size: 25px;
+  color: red;
+  text-align: center;
+}
+
+.subheading-home {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.home-wrapper{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-link {
+  padding: 5px 16px 5px 16px;
+  text-decoration: none;
+  color: #ffff;
+  background-color: red;
+  font-weight: bold;
+  width: 100px;
+  text-align: center;
 }
 
 .tvshow-container {
@@ -41,7 +79,6 @@ code {
   display: flex;
   flex-direction: column;
   padding: 5px;
-  /* background-image: linear-gradient(rgba(22, 22, 22, 0.57) 30%, rgb(0, 0, 0) 100%), url('./assets/background_mobile2.jpg'); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,9 +86,17 @@ code {
 }
 .section-headline {
   text-align: center;
+  margin:0
 }
+
+.section-subheading {
+  text-align: center;
+}
+
 .form-container {
+  max-width: 700px;
   padding: 10px;
+  margin: auto;
 }
 
 .form-header-container{
@@ -103,15 +148,17 @@ input {
 }
 
 .link {
+  
   color: white;
   text-decoration: none;
 }
 .link-text {
   font-size: 16px;
   padding: 3px 0 3px 0;
-  margin: 0 0 10px 0;
+  margin: 0 auto 10px auto;
   text-align: center;
   background-color: rgba(89, 88, 88, 0.687);
+  max-width: 700px;
 }
 /* Pagination  */
 .page-button {
