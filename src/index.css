@@ -191,14 +191,18 @@ input {
 
 .show-container {
   color: white;
-  background-color: black;
   width: 100%;
   padding: 5px;
   min-height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: black;
 }
 .show-titel {
   margin:0;
+}
+.bold {
+  font-weight: bold;
+  color: red;
 }
