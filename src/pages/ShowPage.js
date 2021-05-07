@@ -14,10 +14,17 @@ const ShowPage = () => {
   return (
     <>
       {show &&
-        <div>
-          <h1>{show.title}</h1>
+        <div
+          className="show-container"
+          style={{ backgroundImage: `url('./assets/show.jpg')` }}
+        >
+          <h1 className="show-titel">{show.title}</h1>
+          <p>Cast: {show.cast}</p>
+          <p>Release: {show.release_year}</p>
+          <p>Genre{show.listed_in}</p>
+          <p>Country: {show.country}</p>
+          <p>Available: {show.duration}</p>
           <p>{show.description}</p>
-          <p>{show.release_year}</p>
         </div>
       }
     </>
