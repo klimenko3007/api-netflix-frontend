@@ -10,8 +10,8 @@ import ShowPage from './pages/ShowPage'
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
+      <div className="content-container">
+        <nav className="nav-container">
           <ul>
             <li>
               <Link to="/">Home</Link>

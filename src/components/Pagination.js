@@ -1,5 +1,6 @@
 import React from 'react'
 import PageButton from './PageButton'
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
 
 const Pagination = ({ totalPages, setPageNumber, pageNumber }) => {
   const onPreviousPageClick = () => {
@@ -19,7 +20,7 @@ const Pagination = ({ totalPages, setPageNumber, pageNumber }) => {
         disabled={pageNumber === 1}
         onClick={onPreviousPageClick}
       >
-        Back
+        <FaChevronLeft style={{size: 10}}/>
       </button>
 
       {pages.map(page => <PageButton
@@ -35,7 +36,7 @@ const Pagination = ({ totalPages, setPageNumber, pageNumber }) => {
         onClick={onNextPageClick}
         disabled={pageNumber === pages.length}
       >
-        Next
+        <FaChevronRight />
       </button>
 
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const PageButton = ({ page, setPageNumber, pageNumber }) => {
   const generateClasseName = (pageNumber) => {
-    return `button ${pageNumber === page && "active"}`
+    return `page-button ${pageNumber === page && "active"}`
   }
   return (
     <button

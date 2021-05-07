@@ -10,6 +10,7 @@ const TVShowsComponent = ({ tvShows, pageNumber }) => {
 
   return (
     <div>
+      <h2>{selectedShows.length === 0? "Nothing matching your choice" :"Here are your choices"}</h2>
       {selectedShows.map(show => <TVShowThumb key={show.show_id} show={show} />)}
     </div>
   )

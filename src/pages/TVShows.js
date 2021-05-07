@@ -35,7 +35,7 @@ const TVShows = () => {
   }
 
   return (
-    <div className="tvshow-container">
+    <div className="tvshow-container" style={{backgroundImage: `linear-gradient(rgba(22, 22, 22, 0.57) 30%, rgb(0, 0, 0) 100%), url('./assets/background_mobile2.jpg')`}}>
       <h1 className="section-headline">TV Shows</h1>
       <Form onFormSubmit={onFormSubmit} />
       <TVShowsComponent tvShows={tvShows} pageNumber={pageNumber} />
