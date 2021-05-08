@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { generateURL } from '../reusables/urls'
 import { SHOWS_PER_PAGE } from '../reusables/constants'
+import {showLink} from '../reusables/urls'
 
 import TVShowsComponent from '../components/TVShowsComponent'
 import Pagination from '../components/Pagination'
@@ -38,7 +39,7 @@ const TVShows = () => {
     <div className="tvshow-container" style={{backgroundImage: `linear-gradient(rgba(22, 22, 22, 0.57) 30%, rgb(0, 0, 0) 100%), url('./assets/background_mobile2.jpg')`}}>
       <h1 className="section-headline">TV Shows</h1>
       <Form onFormSubmit={onFormSubmit} />
-      <TVShowsComponent tvShows={tvShows} pageNumber={pageNumber} />
+      <TVShowsComponent tvShows={tvShows} pageNumber={pageNumber} link={showLink} />
       <Pagination
         totalPages={totalPages}
         setPageNumber={setPageNumber}

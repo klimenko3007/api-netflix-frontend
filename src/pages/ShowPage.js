@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom'
 
 import image from '../images/show.jpg'
 
-const ShowPage = () => {
+const ShowPage = ({link}) => {
   const { id } = useParams()
 
   const [show, setShow] = useState()
 
   useEffect(() => {
-    fetch(`https://netflix-data-api-klimenko.herokuapp.com/TV-shows/${id}`)
+    fetch(`${link}${id}`)
       .then(res => res.json())
       .then(receivedShow => setShow(receivedShow.show))
-  }, [id])
+  }, [id, link])
   return (
     <div
       className="show-container"

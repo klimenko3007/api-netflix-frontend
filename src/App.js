@@ -8,6 +8,9 @@ import TVShows from './pages/TVShows'
 import ShowPage from './pages/ShowPage'
 import Header from "./components/Header";
 
+import {movieIdLink} from './reusables/urls'
+import {showIDLink} from './reusables/urls'
+
 const App = () => {
   return (
     <Router>
@@ -23,11 +26,14 @@ const App = () => {
           <Route path="/movies" exact>
             <Movies />
           </Route>
+          <Route path="/movies/:id" exact>
+            <ShowPage link={movieIdLink}/>
+          </Route>
           <Route path="/TV-Shows" exact>
             <TVShows />
           </Route>
           <Route path="/TV-Shows/:id" exact>
-            <ShowPage />
+            <ShowPage link={showIDLink}/>
           </Route>
         </Switch>
       </div>
