@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import Loader from "react-loader-spinner";
-
+import Loader from "react-loader-spinner"
 
 import image from '../images/show.jpg'
 
@@ -21,7 +20,7 @@ const ShowPage = ({ link }) => {
         } else throw new Error(res.statusText)
       })
       .then(receivedShow => {
-        setTimeout(() => setLoading(false), 1500)
+        setTimeout(() => setLoading(false), 1000)
         setShow(receivedShow.show)
       })
       .catch((error) => {
@@ -58,5 +57,4 @@ const ShowPage = ({ link }) => {
     </div>
   )
 }
-
 export default ShowPage
