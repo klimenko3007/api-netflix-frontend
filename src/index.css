@@ -16,19 +16,24 @@ code {
 
 .content-container {
   margin: 0;
+  padding:0;
   min-height: 100vh;
   width: 100%;
 }
+.nav-wrapper {
+  background-color: black;
+  padding: 20px 5px 20px 5px;
+}
 
 .nav-container {
-  margin: 0;
+  margin: 0 auto 0 auto;
   color: white;
   list-style: none;
   display: flex;
   padding: 20px 5px 20px 5px;
   justify-content: space-between;
-  background-color: black;
-  width: 100%;
+  width: 90%;
+  max-width: 700px;
 }
 
 .nav-link {
@@ -42,12 +47,12 @@ code {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
   padding: 5px;
   background-color: black;
 }
 
 .headline-home {
+  margin-top: 30px;
   font-size: 25px;
   color: red;
   text-align: center;
@@ -60,9 +65,10 @@ code {
 }
 
 .home-wrapper{
-  margin-top: 40px;
+  margin: 40px auto 0px auto ;
   display: flex;
   justify-content: space-around;
+  max-width: 700px;
 }
 
 .home-link {
@@ -76,7 +82,6 @@ code {
 }
 
 .tvshow-container {
-  width: 100%;
   margin: 0;
   background-color: #282c34;
   color: #ffff;
@@ -240,4 +245,15 @@ table, th, td {
 
 .text-heading {
   text-transform: uppercase;
+}
+
+.loader, .error {
+  text-align: center;
+}
+
+@media(min-width: 650px) {
+  .nav-container {
+    justify-content: space-around;
+  }
+
 }

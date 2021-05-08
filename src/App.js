@@ -23,16 +23,16 @@ const App = () => {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/movies">
+          <Route path="/movies" exact>
             <Movies />
           </Route>
-          <Route path="/movies/:id">
+          <Route path="/movies/:id" exact>
             <ShowPage link={movieIdLink}/>
           </Route>
-          <Route path="/TV-Shows">
+          <Route path="/TV-Shows" exact>
             <TVShows />
           </Route>
-          <Route path="/TV-Shows/:id">
+          <Route path="/TV-Shows/:id" exact>
             <ShowPage link={showIDLink}/>
           </Route>
         </Switch>
