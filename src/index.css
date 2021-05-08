@@ -224,6 +224,10 @@ input {
 }
 
 /* About */
+.max-width-fix {
+  max-width: 700px;
+  margin:auto;
+}
 .endpoint-link {
   color: white
 }
