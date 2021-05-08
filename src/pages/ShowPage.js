@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 
 import image from '../images/show.jpg'
 
-const ShowPage = ({link}) => {
+const ShowPage = ({ link }) => {
   const { id } = useParams()
 
   const [show, setShow] = useState()
@@ -16,7 +16,7 @@ const ShowPage = ({link}) => {
   return (
     <div
       className="show-container"
-      style={{backgroundImage: `linear-gradient(rgba(22, 22, 22, 0.57) 30%, rgb(0, 0, 0) 100%), url(${image})`}}
+      style={{ backgroundImage: `linear-gradient(rgba(22, 22, 22, 0.57) 30%, rgb(0, 0, 0) 100%), url(${image})` }}
     >
       {show &&
         <>

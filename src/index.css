@@ -19,6 +19,7 @@ code {
   min-height: 100vh;
   width: 100%;
 }
+
 .nav-container {
   margin: 0;
   color: white;
@@ -29,6 +30,7 @@ code {
   background-color: black;
   width: 100%;
 }
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -44,6 +46,7 @@ code {
   padding: 5px;
   background-color: black;
 }
+
 .headline-home {
   font-size: 25px;
   color: red;
@@ -85,6 +88,7 @@ code {
   background-repeat: no-repeat;
   min-height: 100vh;
 }
+
 .section-headline {
   text-align: center;
   margin:0
@@ -151,10 +155,10 @@ input {
 }
 
 .link {
-  
   color: white;
   text-decoration: none;
 }
+
 .link-text {
   font-size: 16px;
   padding: 3px 0 3px 0;
@@ -163,6 +167,7 @@ input {
   background-color: rgba(89, 88, 88, 0.687);
   max-width: 700px;
 }
+
 /* Pagination  */
 .page-button {
   font-size: 10px;
@@ -170,9 +175,11 @@ input {
   color: white;
   height: 20px;
 }
+
 .active {
   border: red 1px solid;
 }
+
 .pagination-button-nav {
   font-size: 10px;
   background: none;
@@ -181,9 +188,11 @@ input {
   outline: none;
   background-color: red;
 }
+
 .pagination-button-nav:disabled {
   background-color: rgba(255, 0, 0, 0.283);
 }
+
 .pagination-container{
   text-align: center;
   margin-bottom: 10px;
@@ -192,8 +201,8 @@ input {
   justify-content: center;
   align-items: center;
 }
-/* Individual show page  */
 
+/* Individual show page  */
 .show-container {
   color: white;
   width: 100%;
@@ -204,10 +213,27 @@ input {
   background-repeat: no-repeat;
   background-color: black;
 }
+
 .show-titel {
   margin:0;
 }
+
 .bold {
   font-weight: bold;
   color: red;
+}
+
+/* About */
+.endpoint-link {
+  color: white
+}
+
+table, th, td {
+  border: 1px solid gray;
+  border-collapse: collapse;
+  padding: 2px;
+}
+
+.text-heading {
+  text-transform: uppercase;
 }

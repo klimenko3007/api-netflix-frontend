@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FaChevronCircleDown } from "react-icons/fa";
+import { FaChevronCircleDown, FaChevronCircleUp } from "react-icons/fa";
 
 const Form = ({ onFormSubmit }) => {
   const [year, setYear] = useState("")
@@ -24,7 +24,7 @@ const Form = ({ onFormSubmit }) => {
         className="form-header-container"
       >
         <h2 className="form-header">Filter the list</h2>
-        <FaChevronCircleDown />
+        {visible? <FaChevronCircleUp/> :<FaChevronCircleDown />}
       </div>
       <form onSubmit={(e) => onFormSubmit(e, updatedQueries)} className={`form-wrapper ${visible ? 'visible' : ""}`}>
         <label className="label">
