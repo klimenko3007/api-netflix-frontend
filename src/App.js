@@ -20,19 +20,19 @@ const App = () => {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/about" exact>
+          <Route path="/about">
             <About />
           </Route>
-          <Route path="/movies" exact>
+          <Route path="/movies">
             <Movies />
           </Route>
-          <Route path="/movies/:id" exact>
+          <Route path="/movies/:id">
             <ShowPage link={movieIdLink}/>
           </Route>
-          <Route path="/TV-Shows" exact>
+          <Route path="/TV-Shows">
             <TVShows />
           </Route>
-          <Route path="/TV-Shows/:id" exact>
+          <Route path="/TV-Shows/:id">
             <ShowPage link={showIDLink}/>
           </Route>
         </Switch>
