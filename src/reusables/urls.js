@@ -5,7 +5,6 @@ export const generateURL = (queries) => {
       URL_shows.searchParams.append(query.name, query.value)
     }
   } )
-  console.log(URL_shows.href)
   return URL_shows.href
 }
 
